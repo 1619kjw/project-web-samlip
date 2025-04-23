@@ -1,0 +1,38 @@
+/* ir.css   main부터 작성!*/
+#wrap main .path {
+    background-color:#fcfcfc;
+    text-align:right;
+    padding:14px 60px 14px 0;
+    font-size:0.75rem;
+    border:1px solid #f1f1f1; /* 테두리는 전체 들어가게 써놓고, 제외할 방향만 따로 써도 됨. */
+    border-left:0; border-right:0;
+}
+#wrap main .path * {/* 글자디자인 */}
+#wrap main .path a {}
+#wrap main .path img {margin:0 10px;}
+#wrap main .path em {}
+#wrap main > * {text-align:center;}
+#wrap main h1 {
+    margin-top:80px 0 20px;
+    font-weight:700;
+    font-size:3.75rem;
+}
+#wrap main > p {
+    margin-bottom:80px;
+    font-size:1.125rem;
+    line-height:1.5;
+}
+#wrap main .bg {
+    background-color:#fcfcfc;
+    border:1px solid #f1f1f1;
+    padding:80px 0;
+}
+/* 레이아웃 위치/정렬 기법 inline-block, float, flex, grid, position */
+#wrap main .bg .ir_list {
+    overflow:hidden; /* 이거해서 밑에 여백을 다시 생기게함 */
+}
+#wrap main .bg .ir_list a {
+    float:left; 
+}
+#wrap main .bg .ir_list a h2 {}
+#wrap main .bg .ir_list a p {}

@@ -1,4 +1,5 @@
-/* header, footer만 들어있는 css */
+/* index, 모든 sub페이지에 적용할 공통 header, footer common.css */
+/* header, footer만 들어있는 모든페이지 공통CSS */
 #wrap {
     /* background-color:aqua; */
     width:1920px;

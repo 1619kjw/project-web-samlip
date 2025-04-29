@@ -5,14 +5,33 @@
     width:1920px;
 }
 /* ========================================================header */
-#wrap header {}
+#wrap header {
+    background-color:aqua;
+    height:92px;
+    padding:0 60px;
+    /* container(header) item(h1, nav, right_menu) */
+    display:flex;
+    flex-flow:row nowrap; /* header에서는 줄바꿈하면 안되니까 nowrap */
+    justify-content:space-between; /* 메인축정렬방법 */
+    align-items:center; /* 교차축 1줄일때 정렬방법 */
+}
 #wrap header h1 {}
 #wrap header h1 a {}
 #wrap header h1 a img {}
-#wrap header nav {}
-#wrap header nav .gnb {}
-#wrap header nav .gnb li {}
+#wrap header nav {
+    background-color:lime;
+}
+#wrap header nav .gnb {
+    /* container(.gnb) item(li) */
+    display:flex; flex-flow:row nowrap;
+}
+#wrap header nav .gnb li {
+    margin-right:60px;
+}
+#wrap header nav .gnb li:last-child {margin-right:0;}
 #wrap header nav .gnb li a {
+    border:1px solid red;
+    height:92px; display:block; line-height:92px;
     font-weight:600;
     font-size:1.125rem;
     /*
@@ -23,18 +42,63 @@
     color:#000; */
     /* text-align:left; 기본값이므로 작성 필요없음 */
 }
-#wrap header .right_menu {}
-#wrap header .right_menu li {}
+#wrap header .right_menu {
+    background-color:yellow;
+    display:flex;
+    flex-flow:row nowrap;
+}
+#wrap header .right_menu li {
+    margin-left:30px;
+}
+#wrap header .right_menu li:first-child {
+    margin-left:0;
+    display:flex;
+    flex-flow:row nowrap;
+    align-items:center;
+}
+/* 포토샵, 피그마에서 디자인한 구분선 디자인은 CSS에서 가상선택자 after 또는 before를 이용하여 면으로 변경하여 디자인한다. */
+#wrap header .right_menu li:first-child::after {
+    content:''; display:inline-block;
+    width:1px; height:20px;
+    background-color:#000;
+    margin-left:30px;
+
+}
+#wrap header .right_menu li:first-child a {
+    line-height:24px;
+}
 #wrap header .right_menu li a {
     font-size:0.75rem;
     letter-spacing:0;
 }
 #wrap header .right_menu li a img {}
 /* ========================================================footer */
-#wrap footer {}
-#wrap footer .top {}
-#wrap footer .top .left {}
-#wrap footer .top .left a {}
+#wrap .footer_full_w {
+    width:100%; padding:50px 60px;
+}
+#wrap footer {
+    background-color:aqua;
+    width:1280px; margin:0 auto;
+    padding:50px 0 50px;
+}
+#wrap footer .top {
+    background-color:lime;
+    margin-bottom:12px;
+    display:flex;
+    flex-flow:row nowrap;
+    justify-content:space-between;
+    align-items:center;
+}
+#wrap footer .top .left {
+    background-color:orange;
+    display:flex;
+    flex-flow:row nowrap;
+    align-items:center;
+}
+#wrap footer .top .left a {
+    margin-right:60px;
+}
+#wrap footer .top .left a:last-child {margin-right:0;}
 #wrap footer .top .left a:nth-child(1) {
     font-weight:600;
     color:#138FBF;
@@ -43,19 +107,37 @@
     font-weight:600;
     color:#DA2128;
 }
-#wrap footer .top .left a img {}
-#wrap footer .top .right {}
+#wrap footer .top .left a img {/* 여긴 이미지 크기가 소수점이 들어가 있어서 약간 떴는데 정렬하고 싶으면 해도된다고 하셔서 내가 정렬해봄 */
+    display:flex;
+    flex-flow:row nowrap; 
+}
+#wrap footer .top .right {
+    background-color:yellow;
+    display:flex;
+    display:row nowrap;
+    align-items:center; 
+}
 /* ==========================footer 패밀리사이트+사이트맵 공통 */
 #wrap footer .top .right .site {
     font-size:0.75rem;
     border:1px solid #eee;
-    padding:7px 10px;
+    padding:7px 10px; height:38px; /* 두 목록버튼 높이를 통일하게 위해서 공통에 적어줌 */
 }
 /* ==========================footer 패밀리사이트+사이트맵 개별 */
-#wrap footer .top .right select {}
+#wrap footer .top .right select {
+    width:197px; outline:none; /* 눌렀을때 테두리 까맣게 되는거 없앰 */
+    background:#fff url(../images/down_arrow.png) no-repeat 94% center;
+}
+/* 목록 꾸밀때 대부분 select를 꾸미고, option은 꾸밀거 없음 */
 #wrap footer .top .right select option {}
 #wrap footer .top .right .site_map {
-    display:inline;
+    background:#fff;
+    width:135px;
+    display:flex;
+    flex-flow:row nowrap;
+    justify-content:space-between; 
+    align-items:center;
+    margin-left:20px;
 }
 #wrap footer .top .right .site_map span {}
 #wrap footer .top .right .site_map img {}
@@ -69,6 +151,7 @@
     /* font-size:0.875rem;
     line-height:1.6;
     color:#808080; */
+    margin-bottom:50px;
 }
 #wrap footer .bottom p {
     /* font-size:0.875rem;

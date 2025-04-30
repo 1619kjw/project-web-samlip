@@ -2,6 +2,8 @@
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>소셜 네트워크 | SPC삼립</title>
     <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-dynamic-subset.min.css" />
@@ -40,29 +42,31 @@
             <div class="path">
                 <a href="./index.html">Home</a>
                 <img src="./images/double_arrow.png" alt="경로 화살표">
-                <span>Social Networks</span>
+                <em>Social Networks</em>
             </div>
             <h1>소셜 네트워크</h1>
             <p>SPC삼립의 다양한 이벤트와 맛있는 이야기</p>
-            <div class="bg">
-                <a href="#">
-                    <span><img src="./images/sns/youtube.png" alt="유튜브 로고"></span>
-                    <em>YouTube</em>
-                    <span>먹고 보고 소화하는 Samlip Studio</span>
-                </a>
-                <a href="#"><!-- 여기서 img를 왜 span으로 묶었더니 이미지 정렬이 된거지? -->
-                    <span><img src="./images/sns/instagram.png" alt="인스타그램 로고"></span>
-                    <em>Instagram</em>
-                    <span>보고 공유하고 저장하고 싶은 군침도는 콘텐츠</span>
-                </a>
-                <a href="#">
-                    <span><img src="./images/sns/facebook.png" alt="페이스북 로고"></span>
-                    <em>Facebook</em>
-                    <span>맛있는 이야기로 하나 되는 소통 플랫폼</span>
-                </a>
-            </div>
+            <section class="bg"><!-- 배경100% -->
+                <div class="container"><!-- 1280가운데 -->
+                    <a href="#">
+                        <p><img src="./images/sns/youtube.png" alt=""></p><!-- 밑에 h2에 이미 글자가 있으니까 alt안써도 됨 -->
+                        <h2>Youtube</h2>
+                        <p>먹고 보고 소화하는 Samlip Studio</p>
+                    </a>
+                    <a href="#">
+                        <p><img src="./images/sns/instagram.png" alt="인스타그램 로고"></p>
+                        <h2>Instagram</h2>
+                        <p>보고 공유하고 저장하고 싶은 군침도는 콘텐츠</p>
+                    </a>
+                    <a href="#">
+                        <p><img src="./images/sns/facebook.png" alt="페이스북 로고"></p>
+                        <h2>Facebook</h2>
+                        <p>맛있는 이야기로 하나 되는 소통 플랫폼</p>
+                    </a>
+                </div>
+            </section>
         </main>
-        <footer>
+        <footer class="footer_full_w">
             <div class="top">
                 <div class="left"><!-- 서브메뉴가 없으니까 li로 안해도 됨 -->
                     <a href="#">개인정보처리방침</a>

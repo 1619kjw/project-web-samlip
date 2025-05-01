@@ -1,9 +1,6 @@
 /* index, 모든 sub페이지에 적용할 공통 header, footer common.css */
 /* header, footer만 들어있는 모든페이지 공통CSS */
-#wrap {
-    /* background-color:aqua; */
-    width:1920px;
-}
+#wrap {}
 /* ========================================================header */
 #wrap header {
     position:relative;/* lnb_bg의 부모 위치 기준 설정 */
